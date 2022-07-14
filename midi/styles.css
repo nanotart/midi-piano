@@ -1,0 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* body background */
+body {
+  background-color: #fdecb1;
+  margin: 0;
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* checkbox */
+.checkbox {
+  display: flex;
+  margin-bottom: 70vh;
+
+}
+
+/* piano */
+.piano {
+  display: flex;
+}
+
+/* each individual key */
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+/* white keys */
+.white {
+  --width: 100px;
+  background-color: rgb(252, 255, 229);
+  border: 1px solid #333;
+}
+
+/* white keys (active)*/
+.white.active {
+  background-color: rgb(181, 255, 250);
+}
+
+/* black keys */
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+/* black keys (active) */
+.black.active {
+  background-color: rgb(158, 179, 255);
+}
